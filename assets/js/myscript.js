@@ -1,4 +1,71 @@
 
+$(document).ready(function () {
+  // Initialize Swiper  
+    let firstColor = $(".color-preview").first().css({
+        "border": "2px solid #555"
+    }).find(".color-option").attr("data-color");
+
+    $('#colorName').text(firstColor);
+
+    let basePath = "./assets/images/product-image/";
+
+    let multiImages = {
+        'pink': [
+            'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image.jpg',
+            'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-side-1.jpg',
+            'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-side-2.jpg',
+            'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-side-3.jpg',
+        ],
+
+        'purple': [
+            'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image.avif', 
+        ],
+
+
+    };
+
+    $(".color-option").click(function () {
+        let color = $(this).attr("data-color");
+        $('#colorName').text(color);
+
+        $(".color-preview").css({
+            "border": "none"
+        });
+
+        $(this).closest(".color-preview").css({
+            "border": "2px solid #555"
+        });
+
+
+        if (multiImages[color]) {
+
+            $("#main-image").attr("src", basePath  + color + '/' + multiImages[color][0]);
+        } else {
+            $("#main-image").attr("src", `assets/images/products/product-${color}.jpg`);
+        }
+    });
+
+
+    $("#increase-quantity").click(function () {
+        let quantityInput = $("#quantity").text();
+        let currentQuantity = parseInt(quantityInput);
+        $("#quantity").empty().text(currentQuantity+1);
+    });
+
+    $("#decrease-quantity").click(function () {
+        let quantityInput = $("#quantity").text();
+        let currentQuantity = parseInt(quantityInput);
+        if (currentQuantity > 1) {
+            $("#quantity").empty().text(currentQuantity-1);
+        }
+    });
+
+
+
+
+
+});
+
 
 const mainImage = document.getElementById("main-image");
 const images = document.querySelectorAll(".product__image");
