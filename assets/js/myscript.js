@@ -57,6 +57,7 @@ $(document).ready(function () {
         let currentQuantity = parseInt(quantityInput);
         if (currentQuantity > 1) {
             $("#quantity").empty().text(currentQuantity-1);
+            
         }
     });
 
