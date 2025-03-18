@@ -18,7 +18,7 @@ $(document).ready(function () {
         ],
 
         'purple': [
-            'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image.avif', 
+            'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image.jpg', 
         ],
 
 
@@ -57,10 +57,16 @@ $(document).ready(function () {
         let currentQuantity = parseInt(quantityInput);
         if (currentQuantity > 1) {
             $("#quantity").empty().text(currentQuantity-1);
-            
+
         }
     });
 
+
+    $('#main-image').click(function () {
+        let src = $(this).attr('src');
+        $('.ImageModal').modal('show');
+        $('.ImageModal').find('img').attr('src', src);
+    })
 
 
 
