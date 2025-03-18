@@ -63,7 +63,6 @@ $(document).ready(function () {
 
 
     $('#main-image').click(function () {
-        alert('dd');
         let src = $(this).attr('src');
         $('.ImageModal').modal('show');
         $('.ImageModal').find('img').attr('src', src);
