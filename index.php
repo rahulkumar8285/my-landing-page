@@ -1,81 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NoirÉlan – Luxury Handbags, Jewelry & More | Elevate Your Style</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Galada&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <meta name="description" content="Discover NoirÉlan, your destination for luxury handbags, elegant jewelry, and premium women's accessories. Elevate your style with high-quality, sophisticated designs crafted for modern women. Shop now for timeless elegance!">
-    <meta name="keywords" content="NoirÉlan, luxury handbags, elegant jewelry premium">
-    <meta name="author" content="NoirÉlan">
-    <meta property="og:title" content="NoirÉlan – Luxury Handbags, Jewelry & More | Elevate Your Style">
-    <meta property="og:description" content="Discover NoirÉlan, your destination for luxury handbags, elegant jewelry, and premium">
-    <meta property="og:image" content="https://www.xn--noirlan-eya.com/assets/images/logo/logo.PNG">
-    <meta property="og:url" content="https://noirelan.com">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="NoirÉlan – Luxury Handbags, Jewelry & More | Elevate Your Style">
-    <meta name="twitter:description" content="Discover NoirÉlan, your destination for luxury handbags, elegant jewelry, and premium">
-    <meta name="twitter:image" content="https://www.xn--noirlan-eya.com/assets/images/logo/logo.PNG">
-    <meta name="twitter:site" content="@noirelan">
-    <meta name="twitter:creator" content="@noirelan">
-    <link rel="canonical" href="https://noirelan.com">
-   
-
-    <link rel="apple-touch-icon" sizes="57x57" href="./assets/images/icon/favicon/favicon.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="./assets/images/icon/favicon/favicon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="./assets/images/icon/favicon/favicon.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="./assets/images/icon/favicon/favicon.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="./assets/images/icon/favicon/favicon.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./assets/images/icon/favicon/favicon.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="./assets/images/icon/favicon/favicon.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./assets/images/icon/favicon/favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/icon/favicon/favicon.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="./assets/images/icon/favicon/favicon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/icon/favicon/favicon.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./assets/images/icon/favicon/favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/icon/favicon/favicon.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
-  </head>
-  <body>
-    <!-- header -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="/">
-            <img src="./assets/images/logo/logo.PNG" alt="NoirÉlan" class="img-fluid" style="height: 50px;"/>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#"> --- </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- header end -->
+<?php
+ require_once('./include/header.php');
+ ?>
 
     <div class="container py-4">
       <div class="row">
@@ -134,7 +59,7 @@
             <span class="badge bg-danger ms-2">40% OFF</span>
             <p class="text-muted mt-1">Inclusive of all taxes</p>
             <p>
-                Stay stylish and adventure-ready with our durable, water-resistant travel bag—designed for all-weather protection, smart dry-wet separation, and ultimate portability. Foldable, fashionable, and unisex, it’s the perfect companion for travelers who demand both function and style. Choose your color and travel with confidence.
+                Stay stylish and adventure-ready with our durable, water-resistant travel bag—designed for all-weather protection, smart dry-wet separation, and ultimate portability.
             </p>
           </div>
 
@@ -221,7 +146,7 @@
               </div>
             </div>
             <div class="col-6 text-end">
-              <span class="small fw-bold">125 reviews</span>
+              <span class="small fw-bold"><a href="#reviews-section">125 reviews</a></span>
             </div>
           </div>
 
@@ -499,7 +424,7 @@
 
 
           <div class="mb-3">
-            <div class="reviews-section">
+            <div class="reviews-section" id="reviews-section">
                 <div class="reviews-header">Product Reviews & Brand Reviews</div>
                 <div class="recommendation">88% of verified buyers recommend this product</div>
                 <div class="rating-overview">
@@ -519,7 +444,7 @@
                     <button class="btn btn-dark">RATE</button>   
                 </div>
                 <div class="rating-bar">    
-                    <div class="stars">5  <svg
+                    <div class="stars"> 5 <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="1em"
                         height="1em"
@@ -611,62 +536,57 @@
                
             </div>
           </div>
+
           <div class="mb-3">
               <hr>
-            <div class="review-card">
-                <div class="review-header">
-                    <div class="stars">★★★★★</div>
-                    <div class="verified-badge">● Verified Buyer</div>
-                </div>
-                <p class="review-text">
-                    I've bought these black t-shirts many times because most of the time I travel abroad and I just love these black t-shirts and the quality
-                </p>
-                <div class="reviewer-info">
-                    <strong>Abhi</strong><br>
-                    9 June 2021
-                </div>
-            </div>
-            <hr>
-            <div class="review-card">
-                <div class="review-header">
-                    <div class="stars">★★★★★</div>
-                    <div class="verified-badge">● Verified Buyer</div>
-                </div>
-                <p class="review-text">
-                    I've bought these black t-shirts many times because most of the time I travel abroad and I just love these black t-shirts and the quality
-                </p>
-                <div class="reviewer-info">
-                    <strong>Abhi</strong><br>
-                    9 June 2021
-                </div>
-            </div>
+            <?php 
+              $product =  getReviewData('product_reviews');
+              if(isset($product) && !empty($product)){
+                foreach($product as $row){
+            ?>
+              <div class="review-card">
+                  <div class="review-header">
+                      <div class="stars">
+                          <?php
+                              $rating = $row['rating'];
+                              for($i = 1; $i <= 5; $i++) {
+                                  if($rating >= $i) {
+                                      echo "★"; 
+                                  } else if($rating > $i-1) {
+                                      echo "★";
+                                  } else {
+                                      echo "☆";
+                                  }
+                              }
+                            ?>                  
+                      </div>
+                      <div class="verified-badge">● Verified Buyer</div>
+                  </div>
+                  <p class="review-text">
+                      <?= $row['product_details'] ?>
+                  </p>
+                  <div class="reviewer-info">
+                      <strong><?= $row['full_name'] ?></strong><br>
+                      <?= date( 'd-m-Y', strtotime($row['created_at'])); ?>
+                  </div>
+              </div>
+              <hr>
+            <?php
+                }
+              }
+              ?>
+           
+              <div class="col-12">
+                  <button class="btn btn-outline-dark w-100" id="loadMore">View All Reviews</button>
+              </div>
 
           </div>
+
 
         </div>
       </div>
     </div>
 
-    <!-- modal -->
-    <div class="modal fade bd-example-modal-lg ImageModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="closeBtn" data-dismiss="modal">
-                <span>&times;</span>
-            </div>           
-             <img src="" class="img-fluid" />
-          </div>
-        </div>
-      </div>
-      
-
-    
-
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="./assets/js/myscript.js"></script>
- 
-  </body>
-</html>
+  <?php
+  require_once('./include/footer.php');
+ ?>

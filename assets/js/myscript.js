@@ -69,7 +69,28 @@ $(document).ready(function () {
     })
 
 
+    $('#loadMore').click(function () {
+            $('.reviewModal').modal('show');
+            let modalBody = $('.reviewModal').find('.modal-body');
 
+            // Add Bootstrap spinner before loading content
+            modalBody.html('<div class="d-flex justify-content-center my-3">' +
+                           '<div class="spinner-border text-primary" role="status">' +
+                           '<span class="visually-hidden">Loading...</span>' +
+                           '</div></div>');   
+                           
+            $.ajax({
+            url: 'review.php', // Fetch all review data
+            method: 'GET',
+            dataType: 'html',
+            success: function (response) {
+                modalBody.html(response); // Append the fetched reviews to modal
+            },
+            error: function () {
+                modalBody.html('<p class="text-danger text-center">Failed to load reviews. Please try again.</p>');
+            }
+        });
+    });
 
 });
 
