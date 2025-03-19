@@ -261,6 +261,11 @@ body {
     font-weight: unset;
 }
 
+.reviewModal{
+  cursor: pointer;
+
+}
+
 .footer-section {
     background-color: #2d2d2d;
     color: white;

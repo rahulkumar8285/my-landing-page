@@ -92,6 +92,11 @@ $(document).ready(function () {
         });
     });
 
+
+    $('.reviewModal').click(function () {
+      $('.reviewModal').modal('hide');
+  });
+
 });
 
 
