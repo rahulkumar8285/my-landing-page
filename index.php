@@ -48,7 +48,7 @@
         <div class="col-lg-6">
           <!-- Product Title -->
           <h2 class="h4 mb-3">
-            NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket (Free
+            Multi-Color Water Proof Foldable Travel Duffel Bag With Pocket (Free
             Shipping)
           </h2>
 
@@ -212,7 +212,7 @@
           </div>
 
           <!-- Add to Bag -->
-          <button class="btn btn-dark w-100 mb-4 py-2">Order Now</button>
+          <button id="checkoutBtn"  class="btn btn-dark w-100 mb-4 py-2">Order Now</button>
 
           <!-- Delivery Check -->
 
@@ -547,18 +547,24 @@
               <div class="review-card">
                   <div class="review-header">
                       <div class="stars">
-                          <?php
-                              $rating = $row['rating'];
-                              for($i = 1; $i <= 5; $i++) {
-                                  if($rating >= $i) {
-                                      echo "★"; 
-                                  } else if($rating > $i-1) {
-                                      echo "★";
-                                  } else {
-                                      echo "☆";
-                                  }
-                              }
-                            ?>                  
+                      <?php
+                        $rating = $row['rating']; // Fetch rating from database
+                        $fullStars = floor($rating); // Count of full stars (e.g., 4 for 4.5)
+                        $halfStar = ($rating - $fullStars) >= 0.5 ? true : false; // Check if half star is needed
+
+                        // Print stars
+                        for ($i = 1; $i <= 5; $i++) {
+                            if ($i <= $fullStars) {
+                                echo "<span style='color: gold;'>★</span>"; // Full Star
+                            } elseif ($halfStar && $i == $fullStars + 1) {
+                                echo "<span style='color: gold;'>☆</span>"; // Half Star (adjusted for display)
+                                $halfStar = false; // Ensure only one half-star appears
+                            } else {
+                                echo "<span style='color: #ccc;'>★</span>"; // Empty Star (Gray)
+                            }
+                        }
+                      ?>
+                 
                       </div>
                       <div class="verified-badge">● Verified Buyer</div>
                   </div>

@@ -55,6 +55,8 @@ body {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
+    scrollbar-color: #ffffff #2d2d2d;
+    scrollbar-width: thin;
   }
 
   .product__image {
@@ -327,6 +329,72 @@ body {
 .payment-icons svg {
     margin: 5px;
 }
+
+.checkout-container {
+  margin: auto;
+  padding: 20px;
+}
+.brand-logo {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.payment-icons img {
+  width: 40px;
+  margin-right: 5px;
+}
+.order-summary {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.payment-methods label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background: white;
+}
+.payment-methods label img {
+  width: 40px;
+  margin-left: auto;
+}
+
+
+.imgBorder{
+  border: 2px solid #2d2d2d;
+}
+
+.deliverDate{
+  color: #52af6a;
+}
+
+.itemImage {
+  position: relative;
+}
+
+.itmCount {
+  position: absolute;
+  right: 0;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background: #343a40;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+#paymentValidErr{
+  color: #dc3545;
+}
+
 
 @media screen and (max-width: 450px) {
     .product__slider{
