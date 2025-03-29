@@ -2,9 +2,9 @@
 <?php
 // Database configuration
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "mystore";
+$username = "u961445218_mystore";
+$password = "y5DaI]&N";
+$dbname = "u961445218_mystore";
 
 // Create connection
 try {
