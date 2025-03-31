@@ -269,6 +269,8 @@ $(document).ready(function () {
   $('#checkOutForm').on('submit', function (event) {
       event.preventDefault(); // Prevent default submission
 
+
+
       let isValid = true;
 
       // Loop through all required inputs and validate them
@@ -303,9 +305,12 @@ $(document).ready(function () {
 
       // If the form is valid, submit via AJAX or perform the next action
       if (isValid) {
+          var btn = $('form#checkOutForm button[type="submit"]');
           // alert('Form is valid! Proceeding with submission.');
           // window.location.href = 'orderProcess.php';
-          
+          btn.append(' <div class="spinner-border spinner-border-sm text-light" role="status"></div>');
+          btn.attr('disabled', true); // Disable button
+
           let formAction = $(this).attr('action'); // Get form action URL
           let formData = $(this).serialize(); // Serialize form data
 
@@ -325,12 +330,18 @@ $(document).ready(function () {
                   if(result.status){
                      if(result.payment == 'online'){
                         startPayment(result.orderDetails,result.mobile);
-                     }    
+                     }else{
+                         btn.find('.spinner-border').remove(); 
+                         btn.attr('disabled', false); // Disable button             
+                         window.location.href = "thankyou.php";
+                     }
                   }
               },
               error: function(error) {
                   alert('Something went wrong!');
                   console.log(error);
+                  btn.find('.spinner-border').remove(); 
+                  btn.attr('disabled', false); // Disable button
               }
           });
 
@@ -405,7 +416,11 @@ function startPayment(order_id, mobileNumber, customerName = "", customerEmail =
       modal: {
           ondismiss: function () {
               alert("Payment was not completed!");
-              
+              var btn = $('form#checkOutForm button[type="submit"]');
+            // alert('Form is valid! Proceeding with submission.');
+            // window.location.href = 'orderProcess.php';
+            btn.find('.spinner-border').remove(); 
+            btn.attr('disabled', false); // Disable button
           }
       }
   };

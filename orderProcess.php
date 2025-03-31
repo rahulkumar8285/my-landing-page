@@ -56,6 +56,7 @@ if ($paymentMethod === 'Online Pay') {
     echo trim(json_encode(['status' => true, 'payment' => 'online', 'orderDetails' => $order_id , 'mobile'=> $phone ]));
     exit;
 } else {
+    createOrder($_POST);
     echo trim(json_encode(['status' => true, 'payment' => 'cod', 'orderDetails' => $lastOrderId]));
     exit;
 }

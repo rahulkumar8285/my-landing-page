@@ -1,14 +1,8 @@
 <?php
     require_once('./include/header.php');
-    $orderId =  $_GET['order_id'];
-
-    if (empty($orderId)) {
-        echo '<script>
-                alert("Something went wrong!"); 
-                window.location.href = "/";
-              </script>';
-        exit;
-    } else {
+    
+    if (isset($_GET['order_id']) && !empty($_GET['order_id'])) {
+        $orderId =  $_GET['order_id'];
         $paymentStatus = 'Paid'; 
         orderUpdate($orderId, $paymentStatus);
     }
