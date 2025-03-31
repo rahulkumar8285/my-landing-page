@@ -5,7 +5,11 @@ $(document).ready(function () {
         "border": "2px solid #555"
     }).find(".color-option").attr("data-color");
 
-    $('#colorName').text(firstColor);
+    if (firstColor) { // Checks if firstColor is not null, undefined, or empty
+        let capitalizedColor = firstColor.charAt(0).toUpperCase() + firstColor.slice(1);
+        $('#colorName').text(capitalizedColor);
+    }
+  
 
     let basePath = "./assets/images/product-image/";
 
@@ -26,6 +30,48 @@ $(document).ready(function () {
             'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-side-5.jpg',
         ],
 
+        'blue':[
+          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image.jpeg',
+          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-1.jpeg',
+          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-2.jpeg',
+          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-3.jpeg',
+          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-4.jpeg',
+        ],
+
+        'black':[
+          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image.jpg',
+          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-1.jpg',
+          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-2.jpg',
+          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-3.jpg',
+          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-4.jpg',
+          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-5.jpg',
+          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-6.jpg',
+        ],
+
+
+        'grey':[
+          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image.jpg',
+          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-1.jpg',
+          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-2.jpg',
+          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-3.jpg',
+          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-4.jpg',
+          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-5.jpg',
+          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-6.jpg',
+          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-7.jpg',
+        ],
+
+        'green':[
+          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image.jpg',
+          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-1.jpg',
+          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-2.jpg',
+          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-3.jpg',
+          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-4.jpg',
+          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-5.jpg',
+        ],
+
+
+
+
 
     };
 
@@ -34,9 +80,10 @@ $(document).ready(function () {
     let itemqty = Cookies.get('itemqty');
 
     if (color && itemqty) { // Check if both cookies exist
-      if (multiImages[color]) {
+      let leColor = color.toLowerCase();
+      if (multiImages[leColor]) {
           // console.log(multiImages[color]); // Log the specific color images
-          $("#checkout-img").attr("src", basePath  + color + '/' + multiImages[color][0]);
+          $("#checkout-img").attr("src", basePath  + leColor + '/' + multiImages[leColor][0]);
           $('#finaCoun').empty().text(itemqty);
           let priceVal = 599;
           let subTotal = 599 * itemqty;
@@ -48,7 +95,8 @@ $(document).ready(function () {
 
     $(".color-option").click(function () {
         let color = $(this).attr("data-color");
-        $('#colorName').text(color);
+        let capitalizedColor = color.charAt(0).toUpperCase() + color.slice(1);
+        $('#colorName').text(capitalizedColor);
 
         $(".color-preview").css({
             "border": "none"
@@ -136,19 +184,25 @@ $(document).ready(function () {
 
 
 
-    $('#checkoutBtn').on('click',function(){
-         $(this).append(' <div class="spinner-border spinner-border-sm text-light" role="status"></div>');
-         $(this).attr('disabled', true);
-
-         let color = $('#colorName').text();
-         let itemqty  = $('#quantity').text();
-      
-         Cookies.set('color', color);
-         Cookies.set('itemqty', itemqty);
-
-
-         window.location.href = 'checkout.php';
+    $('#checkoutBtn').on('click', function () {
+        let btn = $(this); // Store reference to button
+        btn.append(' <div class="spinner-border spinner-border-sm text-light" role="status"></div>');
+        btn.attr('disabled', true); // Disable button
+    
+        let color = $('#colorName').text();
+        let itemqty = $('#quantity').text();
+    
+        Cookies.set('color', color);
+        Cookies.set('itemqty', itemqty);
+    
+        // Simulate processing (remove loader after 2 sec, then redirect)
+        setTimeout(function () {
+            btn.find('.spinner-border').remove(); // Remove spinner
+            btn.attr('disabled', false); // Enable button
+            window.location.href = 'checkout.php';
+        }, 2000); // Adjust time as needed
     });
+  
     
 
 
@@ -248,23 +302,40 @@ $(document).ready(function () {
       }
 
       // If the form is valid, submit via AJAX or perform the next action
-      // if (isValid) {
-      //     alert('Form is valid! Proceeding with submission.');
-      //     // Example: Submit via AJAX
-      //     $.ajax({
-      //         url: $(this).attr('action'), // Get form action URL
-      //         type: 'POST',
-      //         data: $(this).serialize(), // Serialize form data
-      //         success: function (response) {
-      //             alert('Order placed successfully!');
-      //             console.log(response);
-      //         },
-      //         error: function (error) {
-      //             alert('Something went wrong!');
-      //             console.log(error);
-      //         }
-      //     });
-      // }
+      if (isValid) {
+          // alert('Form is valid! Proceeding with submission.');
+          // window.location.href = 'orderProcess.php';
+          
+          let formAction = $(this).attr('action'); // Get form action URL
+          let formData = $(this).serialize(); // Serialize form data
+
+          let color = Cookies.get('color');
+          let itemqty = Cookies.get('itemqty');
+          formData += `&color=${encodeURIComponent(color)}&itemqty=${encodeURIComponent(itemqty)}`;
+
+          
+          $.ajax({
+              url: formAction,
+              type: 'POST',
+              data: formData,
+              success: function(response) {
+                let result = JSON.parse(response);
+                  // Optionally redirect to success page
+                  // window.location.href = "success.html";
+                  if(result.status){
+                     if(result.payment == 'online'){
+                        startPayment(result.orderDetails,result.mobile);
+                     }    
+                  }
+              },
+              error: function(error) {
+                  alert('Something went wrong!');
+                  console.log(error);
+              }
+          });
+
+          
+      }
   });
 
   // Remove 'is-invalid' class when the user types
@@ -284,15 +355,65 @@ $(document).ready(function () {
         let discount = Math.round(subTotal * 0.05); // 5% discount (rounded)
         let finalSum = subTotal - discount; // Apply discount
 
-        $('#prepaidorder').text(discount); // Show discount amount
-        $('#total').text(finalSum); // Show final amount
+        $('#prepaidorder').text('₹'+discount); // Show discount amount
+        $('#total').text('₹'+finalSum); // Show final amount
         $('.prepaidorderBox').css('display', 'block'); // Show discount box
     } else {
         // If Cash on Delivery is selected, reset to original subtotal
         $('#prepaidorder').text('0'); // No discount
-        $('#total').text(subTotal); // Set total to original subtotal
+        $('#total').text('₹'+subTotal); // Set total to original subtotal
         $('.prepaidorderBox').css('display', 'none'); // Hide discount box
     }
 });
+
+
+
+
+function startPayment(order_id, mobileNumber, customerName = "", customerEmail = "") {
+ 
+  var options = {
+      key: "rzp_test_hahgRUeJH8ilS0", // Replace with your Razorpay API Key
+      amount: 0, // Amount will be dynamically set in backend
+      currency: "INR",
+      name: "NoirÉlan",
+      description: "Payment for your order",
+      image: "https://xn--noirlan-eya.com/assets/images/logo/logo.PNG",
+      order_id: order_id, // Order ID from backend
+      prefill: {
+          contact: mobileNumber
+      },
+      notes: {
+          order_id: order_id,
+          business: "NoirÉlan Luxury Store"
+      },
+      theme: {
+          color: "#738276",
+          backdrop_color: "#f4f4f4" // Light grey background
+      },
+      modal: {
+          escape: false, // Prevent closing on Esc key
+          animation: true // Enable smooth animation
+      },
+      retry: {
+          enabled: true,
+          max_count: 3 // Allow up to 3 retry attempts
+      },
+      send_sms_hash: true, // Enable SMS OTP verification
+      handler: function (response) {
+        window.location.href = "thankyou.php?order_id=" + order_id;
+      },
+      modal: {
+          ondismiss: function () {
+              alert("Payment was not completed!");
+              
+          }
+      }
+  };
+
+  var rzp = new Razorpay(options);
+  rzp.open();
+}
+
+    
 
 });

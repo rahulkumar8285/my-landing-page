@@ -2,9 +2,14 @@
 <?php
 // Database configuration
 $servername = "localhost";
-$username = "u961445218_mystore";
-$password = "y5DaI]&N";
-$dbname = "u961445218_mystore";
+$username = "root";
+$password = "";
+$dbname = "mystore";
+
+$razorpay_config = array(
+    'api_key' => 'rzp_test_Y2wy8t1wD1AFaA',
+    'api_secret' => 'zSqRMpIa2ljBBpkieFYGmfLa',
+);
 
 // Create connection
 try {

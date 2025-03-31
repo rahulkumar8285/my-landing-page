@@ -5,10 +5,9 @@
                 <div class="col-md-3 mb-4">
                     <h6 class="section-title">Customer Service</h6>
                     <ul class="footer-list">
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Track Order</a></li>
-                        <li><a href="#">Return Order</a></li>
-                        <li><a href="#">Cancel Order</a></li>
+                        <li><a href="shipping-policy.php">Shipping policy</a></li>
+                        <li><a href="refund-policy.php">Return policy</a></li>
+                        <li><a href="privacy-policy.php">Privacy policy</a></li>
                     </ul>
                 </div>
 
@@ -16,10 +15,10 @@
                 <div class="col-md-3 mb-4">
                     <h6 class="section-title">Company</h6>
                     <ul class="footer-list">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">We are hiring</a></li>
+                        <li><a href="about-us.php">About Us</a></li>
+                        <li><a href="terms-conditions.php">Terms & Conditions</a></li>
+                        <li><a href="contact-us.php">Contact Us</a></li>
+                        <!-- <li><a href="#">We are hiring</a></li> -->
                     </ul>
                 </div>
 
@@ -27,8 +26,8 @@
                 <div class="col-md-3 mb-4">
                     <h6 class="section-title">Connect With Us</h6>
                     <ul class="footer-list">
-                        <li>4.7M People like this</li>
-                        <li>1M People like this</li>
+                        <li><a href="tel:+919311734258">Call: +91 9311734258</a></li>
+                        <li><a href="mailto:support@noirelan.com">support@noirelan.com</a></li>
                     </ul>
                 </div>
 

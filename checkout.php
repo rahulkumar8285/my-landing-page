@@ -1,8 +1,7 @@
 <?php
  require_once('./include/header.php');
- ?>
-
-
+ // Include the Razorpay PHP library
+?>
 
 <div class="container checkout-container">
     
@@ -10,7 +9,7 @@
         <!-- Left Side (Form) -->
         <div class="col-md-7">
 
-        <form id="checkOutForm" name="checkOutForm">
+        <form id="checkOutForm" action="orderProcess.php">
             <!-- Contact -->
             <h5>Contact</h5>
             <input type="text" class="form-control mb-3" 
@@ -115,35 +114,8 @@
     </div>
 </div>
 
-
-
-
-
-
-
-
-
-
  <?php
   require_once('./include/footer.php');
  ?>
+ <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
-<script>    
-  $(document).ready(function(){
-    window.addEventListener("beforeunload", function (event) {
-        event.preventDefault(); 
-        event.returnValue = "Are you sure you want to leave this page?"; // Message for modern browsers
-    });
-
-    let today = new Date(); // Get current date
-    today.setDate(today.getDate() + 3); // Add 3 days
-
-    // Format date as "23 March 2025"
-    let options = { day: 'numeric', month: 'long', year: 'numeric' };
-    let formattedDate = today.toLocaleDateString('en-GB', options);
-
-    $('.deliverDate').empty().text(formattedDate);
-
-
-  });
-</script>

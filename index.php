@@ -163,19 +163,19 @@
               </div>
              
               <div class="color-preview">
-                <div class="color-option" style="background-color: #b4bce1;" ></div>
+                <div class="color-option" data-color="blue" style="background-color: #99a5bc;" ></div>
               </div>
 
               <div class="color-preview">
-                <div class="color-option" style="background-color: #2e3034;" ></div>
+                <div class="color-option" data-color="black"  style="background-color: #2e3034;" ></div>
               </div>
 
               <div class="color-preview">
-                <div class="color-option" style="background-color: #c2d1c1;" ></div>
+                <div class="color-option" data-color="grey"  style="background-color: #8c8d97;" ></div>
               </div>
 
               <div class="color-preview">
-                <div class="color-option" style="background-color: #aaa49f;" ></div>
+                <div class="color-option" data-color="green" style="background-color: #a1b49f;" ></div>
               </div>
 
             </div>
