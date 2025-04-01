@@ -15,8 +15,8 @@ $dbname = "u961445218_mystore";
 
 
 $razorpay_config = array(
-    'api_key' => 'rzp_test_Y2wy8t1wD1AFaA',
-    'api_secret' => 'zSqRMpIa2ljBBpkieFYGmfLa',
+    'api_key' => 'rzp_live_wEoP58ZS6GW7Op',
+    'api_secret' => '7OTdm1YbFzItQLIOczW3JBoD',
 );
 
 // Create connection

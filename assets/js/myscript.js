@@ -383,7 +383,7 @@ $(document).ready(function () {
 function startPayment(order_id, mobileNumber, customerName = "", customerEmail = "") {
  
   var options = {
-      key: "rzp_test_hahgRUeJH8ilS0", // Replace with your Razorpay API Key
+      key: "rzp_live_wEoP58ZS6GW7Op", // Replace with your Razorpay API Key
       amount: 0, // Amount will be dynamically set in backend
       currency: "INR",
       name: "NoirÉlan",

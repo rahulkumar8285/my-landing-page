@@ -37,8 +37,8 @@ if ($paymentMethod === 'Online Pay') {
     $discount = round($subTotal * 0.05); // 5% discount
     $finalPayamount = $subTotal - $discount;
 
-    $api_key = 'rzp_test_hahgRUeJH8ilS0';
-    $api_secret = 'XrQ4ZQl9GqFHSqAcP1AOLfGD';
+    $api_key = 'rzp_live_wEoP58ZS6GW7Op';
+    $api_secret = '7OTdm1YbFzItQLIOczW3JBoD';
 
     $api = new Api($api_key, $api_secret);
     
