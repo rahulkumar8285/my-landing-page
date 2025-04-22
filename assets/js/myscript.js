@@ -1,6 +1,35 @@
 
 $(document).ready(function () {
-  // Initialize Swiper  
+
+    // get parent Side image Width 
+    let mainImage = $('#main-image');
+    if (mainImage.length > 0) { // Check if #main-image exists
+        let imageWidth = mainImage.height();
+        if (imageWidth > 0) {
+
+            $('.productList').css({
+                'height': imageWidth + 'px'
+            });
+        }
+    }
+
+    // price list for different packs
+    const priceList = {
+        'pack of 1': {
+          delPrice: 1045,
+          sellPrice: 499,
+        },
+        'pack of 4': {
+          delPrice: 4180,
+          sellPrice: 1999,
+        },
+        'pack of 16': {
+          delPrice: 16720,
+          sellPrice: 6488,
+        },
+      };
+
+    // Initialize Swiper  
     let firstColor = $(".color-preview").first().css({
         "border": "2px solid #555"
     }).find(".color-option").attr("data-color");
@@ -9,89 +38,34 @@ $(document).ready(function () {
         let capitalizedColor = firstColor.charAt(0).toUpperCase() + firstColor.slice(1);
         $('#colorName').text(capitalizedColor);
     }
-  
-
-    let basePath = "./assets/images/product-image/";
-
-    let multiImages = {
-        'pink': [
-            'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image.jpg',
-            'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-side-1.jpg',
-            'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-side-2.jpg',
-            'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-side-3.jpg',
-        ],
-
-        'purple': [
-            'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image.jpg', 
-            'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-side-1.jpg',
-            'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-side-2.jpg',
-            'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-side-3.jpg',
-            'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-side-4.jpg',
-            'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-side-5.jpg',
-        ],
-
-        'blue':[
-          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image.jpeg',
-          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-1.jpeg',
-          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-2.jpeg',
-          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-3.jpeg',
-          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-4.jpeg',
-        ],
-
-        'black':[
-          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image.jpg',
-          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-1.jpg',
-          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-2.jpg',
-          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-3.jpg',
-          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-4.jpg',
-          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-5.jpg',
-          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-6.jpg',
-        ],
-
-
-        'grey':[
-          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image.jpg',
-          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-1.jpg',
-          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-2.jpg',
-          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-3.jpg',
-          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-4.jpg',
-          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-5.jpg',
-          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-6.jpg',
-          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-7.jpg',
-        ],
-
-        'green':[
-          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image.jpg',
-          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-1.jpg',
-          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-2.jpg',
-          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-3.jpg',
-          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-4.jpg',
-          'NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image-side-5.jpg',
-        ],
-
-
-
-
-
-    };
-
-
+   
     let color = Cookies.get('color');
     let itemqty = Cookies.get('itemqty');
 
     if (color && itemqty) { // Check if both cookies exist
       let leColor = color.toLowerCase();
-      if (multiImages[leColor]) {
-          // console.log(multiImages[color]); // Log the specific color images
-          $("#checkout-img").attr("src", basePath  + leColor + '/' + multiImages[leColor][0]);
+      if (priceList[leColor]) {
+          let value = priceList[leColor];
           $('#finaCoun').empty().text(itemqty);
-          let priceVal = 599;
-          let subTotal = 599 * itemqty;
+          let priceVal = value.sellPrice;
+          let subTotal = value.sellPrice * itemqty;
           $('#subTotal').empty().text('₹'+subTotal);
           $('#total').empty().text('₹'+subTotal);
 
-      }
-  } 
+
+          let currentDate = new Date();
+          currentDate.setDate(currentDate.getDate() + 2); // Add 2 days
+        let formattedDate = currentDate.toLocaleDateString('en-GB', {
+            day: '2-digit',
+            month: 'long',
+            year: 'numeric'
+        }).replace(/ /g, '-');
+          $('.deliverDate').empty().text(formattedDate);
+
+        }
+    } 
+
+
 
     $(".color-option").click(function () {
         let color = $(this).attr("data-color");
@@ -106,21 +80,21 @@ $(document).ready(function () {
             "border": "2px solid #555"
         });
 
+        if (color) {
+            let leColor = color.toLowerCase();
+            let value = priceList[leColor];
+            
+            if (value) {
+                let delPrice = value.delPrice;
+                let sellPrice = value.sellPrice;
+                $('.delValue').empty().text('₹' + delPrice);
+                $('.sellValue').empty().text('₹' + sellPrice);
+                let lessAmount = delPrice - sellPrice;
+                let percentage = Math.round((lessAmount / delPrice) * 100);
+                $('.mergenLess').empty().text('Save ₹ ' + lessAmount + ' (' + percentage + '%)');
+            }
 
-        if (multiImages[color]) {
-
-            $("#main-image").attr("src", basePath  + color + '/' + multiImages[color][0]);
-            // change all images
-            $('.product__slider').empty();
-            multiImages[color].forEach((image, index) => {
-                let img = `<img class="product__image ${index === 0 ? 'product__image--active' : ''}"  src="${basePath + color + '/' + image}" alt="product image">`;
-                
-                $('.product__slider').append(img);
-            });
-
-        } else {
-            $("#main-image").attr("src", `assets/images/products/product-${color}.jpg`);
-        }
+        } 
     });
 
 
@@ -173,7 +147,7 @@ $(document).ready(function () {
 
     $('.reviewModal').click(function () {
       $('.reviewModal').modal('hide');
-  });
+    });
 
 
     $('.product__slider').on('click', 'img', function () {
@@ -181,7 +155,6 @@ $(document).ready(function () {
         $(this).addClass('product__image--active');
         $('#main-image').attr('src', $(this).attr('src'));
     });
-
 
 
     $('#checkoutBtn').on('click', function () {
@@ -204,10 +177,212 @@ $(document).ready(function () {
     });
   
     
+    $('.productList img').on('click', function () {
+        let src = $(this).attr('src');
+        $('#main-image').attr('src', src);
+    });
+
+    $('.uperArrow').on('click', function () {
+        $('.productList').animate({
+          scrollTop: $('.productList').scrollTop() - 100
+        }, 200); // scrolls up by 100px
+      });
+      
+    $('.downArrow').on('click', function () {
+    $('.productList').animate({
+        scrollTop: $('.productList').scrollTop() + 100
+    }, 200); // scrolls down by 100px
+    });
+
+    function getCookie(name) {
+        let cookies = document.cookie.split('; ');
+        for (let i = 0; i < cookies.length; i++) {
+            let cookie = cookies[i].split('=');
+            if (cookie[0] === name) {
+                return decodeURIComponent(cookie[1]); // Return cookie value
+            }
+        }
+        return null; // Return null if cookie doesn't exist
+    }
+
+    $('#checkOutForm').on('submit', function (event) {
+        event.preventDefault(); // Prevent default submission
 
 
 
+        let isValid = true;
+
+        // Loop through all required inputs and validate them
+        $('#checkOutForm input[required], #checkOutForm textarea[required]').each(function () {
+            let value = $(this).val().trim();
+
+            if (value === '') {
+                $(this).addClass('is-invalid'); // Add Bootstrap's invalid class
+                isValid = false;
+            } else {
+                $(this).removeClass('is-invalid'); // Remove invalid class if fixed
+            }
+        });
+
+        // Validate phone number (must be 10 digits)
+        let phone = $('#phone').val().trim();
+        if (phone.length !== 10 || !/^\d{10}$/.test(phone)) {
+            $('#phone').addClass('is-invalid');
+            isValid = false;
+        } else {
+            $('#phone').removeClass('is-invalid');
+        }
+
+        // Validate payment method (must be selected)
+        if (!$('input[name="paymentMethod"]:checked').val()) {
+            $('#paymentValidErr').empty().text('Select Payment Method');
+            isValid = false;
+        } else {
+            $('input[name="paymentMethod"]').removeClass('is-invalid');
+            $('#paymentValidErr').empty()
+        }
+
+        // If the form is valid, submit via AJAX or perform the next action
+        if (isValid) {
+            var btn = $('form#checkOutForm button[type="submit"]');
+            // alert('Form is valid! Proceeding with submission.');
+            // window.location.href = 'orderProcess.php';
+            btn.append(' <div class="spinner-border spinner-border-sm text-light" role="status"></div>');
+            btn.attr('disabled', true); // Disable button
+
+            let formAction = $(this).attr('action'); // Get form action URL
+            let formData = $(this).serialize(); // Serialize form data
+
+            let color = Cookies.get('color');
+            let itemqty = Cookies.get('itemqty');
+            formData += `&color=${encodeURIComponent(color)}&itemqty=${encodeURIComponent(itemqty)}`;
+
+            
+            $.ajax({
+                url: formAction,
+                type: 'POST',
+                data: formData,
+                success: function(response) {
+                    let result = JSON.parse(response);
+                    // Optionally redirect to success page
+                    // window.location.href = "success.html";
+                    if(result.status){
+                        if(result.payment == 'online'){
+                            startPayment(result.orderDetails,result.mobile);
+                        }else{
+                            btn.find('.spinner-border').remove(); 
+                            btn.attr('disabled', false); // Disable button             
+                            window.location.href = "thankyou.php";
+                        }
+                    }
+                },
+                error: function(error) {
+                    alert('Something went wrong!');
+                    console.log(error);
+                    btn.find('.spinner-border').remove(); 
+                    btn.attr('disabled', false); // Disable button
+                }
+            });
+
+            
+        }
+    });
+
+    // Remove 'is-invalid' class when the user types
+    $('#checkOutForm input, #checkOutForm textarea').on('input', function () {
+        $(this).removeClass('is-invalid');
+    });
+
+
+    $('input[name="paymentMethod"]').click(function () {
+        let paymentType = $(this).val();
+        let itemqty = Cookies.get('itemqty') || 0; // Default to 0 if not set
+        itemqty = parseInt(itemqty, 10); // Convert to integer
+
+        let color = Cookies.get('color'); // Default to 0 if not set
+        let leColor = color.toLowerCase();
+        if (priceList[leColor]) {
+           
+            let price = priceList[leColor];
+            let subTotal = price.sellPrice * itemqty;
+
+            if (paymentType === 'Online Pay') {
+                let discount = Math.round(subTotal * 0.05); // 5% discount (rounded)
+                let finalSum = subTotal - discount; // Apply discount
+    
+                $('#prepaidorder').text('₹'+discount); // Show discount amount
+                $('#total').text('₹'+finalSum); // Show final amount
+                $('.prepaidorderBox').css('display', 'block'); // Show discount box
+            } else {
+                // If Cash on Delivery is selected, reset to original subtotal
+                $('#prepaidorder').text('0'); // No discount
+                $('#total').text('₹'+subTotal); // Set total to original subtotal
+                $('.prepaidorderBox').css('display', 'none'); // Hide discount box
+            }
+
+        }
+
+       
+       
+    });
+
+
+
+
+    function startPayment(order_id, mobileNumber, customerName = "", customerEmail = "") {
+    
+    var options = {
+        key: "rzp_live_wEoP58ZS6GW7Op", // Replace with your Razorpay API Key
+        amount: 0, // Amount will be dynamically set in backend
+        currency: "INR",
+        name: "NoirÉlan",
+        description: "Payment for your order",
+        image: "https://xn--noirlan-eya.com/assets/images/logo/logo.PNG",
+        order_id: order_id, // Order ID from backend
+        prefill: {
+            contact: mobileNumber
+        },
+        notes: {
+            order_id: order_id,
+            business: "NoirÉlan Luxury Store"
+        },
+        theme: {
+            color: "#738276",
+            backdrop_color: "#f4f4f4" // Light grey background
+        },
+        modal: {
+            escape: false, // Prevent closing on Esc key
+            animation: true // Enable smooth animation
+        },
+        retry: {
+            enabled: true,
+            max_count: 3 // Allow up to 3 retry attempts
+        },
+        send_sms_hash: true, // Enable SMS OTP verification
+        handler: function (response) {
+            window.location.href = "thankyou.php?order_id=" + order_id;
+        },
+        modal: {
+            ondismiss: function () {
+                alert("Payment was not completed!");
+                var btn = $('form#checkOutForm button[type="submit"]');
+                // alert('Form is valid! Proceeding with submission.');
+                // window.location.href = 'orderProcess.php';
+                btn.find('.spinner-border').remove(); 
+                btn.attr('disabled', false); // Disable button
+            }
+        }
+    };
+
+    var rzp = new Razorpay(options);
+    rzp.open();
+    }
+
+    
 });
+
+
+
 
 
 // const mainImage = document.getElementById("main-image");
@@ -227,208 +402,26 @@ $(document).ready(function () {
 
  
  // Optional: Change the toggle icon from "+" to "-" when expanded
- document.querySelectorAll(".collapse-header").forEach((header) => {
-    header.addEventListener("click", () => {
-      const icon = header.querySelector("span:last-child");
-      if (header.getAttribute("aria-expanded") === "true") {
-        icon.textContent = "+";
-      } else {
-        icon.textContent = "-";
-      }
-    });
-  });
+//  document.querySelectorAll(".collapse-header").forEach((header) => {
+//     header.addEventListener("click", () => {
+//       const icon = header.querySelector("span:last-child");
+//       if (header.getAttribute("aria-expanded") === "true") {
+//         icon.textContent = "+";
+//       } else {
+//         icon.textContent = "-";
+//       }
+//     });
+//   });
 
-  // Open the first collapse section on document load
-  document.addEventListener("DOMContentLoaded", () => {
-    const firstCollapseHeader = document.querySelector(".collapse-header");
-    const firstCollapseContent =
-      document.querySelector(".collapse-content");
-    if (firstCollapseHeader && firstCollapseContent) {
-      firstCollapseHeader.setAttribute("aria-expanded", "true");
-      firstCollapseContent.classList.add("show");
-      firstCollapseHeader.querySelector("span:last-child").textContent =
-        "-";
-    }
-  });
-
-
-
-  function getCookie(name) {
-    let cookies = document.cookie.split('; ');
-    for (let i = 0; i < cookies.length; i++) {
-        let cookie = cookies[i].split('=');
-        if (cookie[0] === name) {
-            return decodeURIComponent(cookie[1]); // Return cookie value
-        }
-    }
-    return null; // Return null if cookie doesn't exist
-}
-
-
-$(document).ready(function () {
-  $('#checkOutForm').on('submit', function (event) {
-      event.preventDefault(); // Prevent default submission
-
-
-
-      let isValid = true;
-
-      // Loop through all required inputs and validate them
-      $('#checkOutForm input[required], #checkOutForm textarea[required]').each(function () {
-          let value = $(this).val().trim();
-
-          if (value === '') {
-              $(this).addClass('is-invalid'); // Add Bootstrap's invalid class
-              isValid = false;
-          } else {
-              $(this).removeClass('is-invalid'); // Remove invalid class if fixed
-          }
-      });
-
-      // Validate phone number (must be 10 digits)
-      let phone = $('#phone').val().trim();
-      if (phone.length !== 10 || !/^\d{10}$/.test(phone)) {
-          $('#phone').addClass('is-invalid');
-          isValid = false;
-      } else {
-          $('#phone').removeClass('is-invalid');
-      }
-
-      // Validate payment method (must be selected)
-      if (!$('input[name="paymentMethod"]:checked').val()) {
-          $('#paymentValidErr').empty().text('Select Payment Method');
-          isValid = false;
-      } else {
-          $('input[name="paymentMethod"]').removeClass('is-invalid');
-          $('#paymentValidErr').empty()
-      }
-
-      // If the form is valid, submit via AJAX or perform the next action
-      if (isValid) {
-          var btn = $('form#checkOutForm button[type="submit"]');
-          // alert('Form is valid! Proceeding with submission.');
-          // window.location.href = 'orderProcess.php';
-          btn.append(' <div class="spinner-border spinner-border-sm text-light" role="status"></div>');
-          btn.attr('disabled', true); // Disable button
-
-          let formAction = $(this).attr('action'); // Get form action URL
-          let formData = $(this).serialize(); // Serialize form data
-
-          let color = Cookies.get('color');
-          let itemqty = Cookies.get('itemqty');
-          formData += `&color=${encodeURIComponent(color)}&itemqty=${encodeURIComponent(itemqty)}`;
-
-          
-          $.ajax({
-              url: formAction,
-              type: 'POST',
-              data: formData,
-              success: function(response) {
-                let result = JSON.parse(response);
-                  // Optionally redirect to success page
-                  // window.location.href = "success.html";
-                  if(result.status){
-                     if(result.payment == 'online'){
-                        startPayment(result.orderDetails,result.mobile);
-                     }else{
-                         btn.find('.spinner-border').remove(); 
-                         btn.attr('disabled', false); // Disable button             
-                         window.location.href = "thankyou.php";
-                     }
-                  }
-              },
-              error: function(error) {
-                  alert('Something went wrong!');
-                  console.log(error);
-                  btn.find('.spinner-border').remove(); 
-                  btn.attr('disabled', false); // Disable button
-              }
-          });
-
-          
-      }
-  });
-
-  // Remove 'is-invalid' class when the user types
-  $('#checkOutForm input, #checkOutForm textarea').on('input', function () {
-      $(this).removeClass('is-invalid');
-  });
-
-
-  $('input[name="paymentMethod"]').click(function () {
-    let paymentType = $(this).val();
-    let itemqty = Cookies.get('itemqty') || 0; // Default to 0 if not set
-    itemqty = parseInt(itemqty, 10); // Convert to integer
-
-    let subTotal = Math.round(599 * itemqty); // Calculate subtotal
-
-    if (paymentType === 'Online Pay') {
-        let discount = Math.round(subTotal * 0.05); // 5% discount (rounded)
-        let finalSum = subTotal - discount; // Apply discount
-
-        $('#prepaidorder').text('₹'+discount); // Show discount amount
-        $('#total').text('₹'+finalSum); // Show final amount
-        $('.prepaidorderBox').css('display', 'block'); // Show discount box
-    } else {
-        // If Cash on Delivery is selected, reset to original subtotal
-        $('#prepaidorder').text('0'); // No discount
-        $('#total').text('₹'+subTotal); // Set total to original subtotal
-        $('.prepaidorderBox').css('display', 'none'); // Hide discount box
-    }
-});
-
-
-
-
-function startPayment(order_id, mobileNumber, customerName = "", customerEmail = "") {
- 
-  var options = {
-      key: "rzp_live_wEoP58ZS6GW7Op", // Replace with your Razorpay API Key
-      amount: 0, // Amount will be dynamically set in backend
-      currency: "INR",
-      name: "NoirÉlan",
-      description: "Payment for your order",
-      image: "https://xn--noirlan-eya.com/assets/images/logo/logo.PNG",
-      order_id: order_id, // Order ID from backend
-      prefill: {
-          contact: mobileNumber
-      },
-      notes: {
-          order_id: order_id,
-          business: "NoirÉlan Luxury Store"
-      },
-      theme: {
-          color: "#738276",
-          backdrop_color: "#f4f4f4" // Light grey background
-      },
-      modal: {
-          escape: false, // Prevent closing on Esc key
-          animation: true // Enable smooth animation
-      },
-      retry: {
-          enabled: true,
-          max_count: 3 // Allow up to 3 retry attempts
-      },
-      send_sms_hash: true, // Enable SMS OTP verification
-      handler: function (response) {
-        window.location.href = "thankyou.php?order_id=" + order_id;
-      },
-      modal: {
-          ondismiss: function () {
-              alert("Payment was not completed!");
-              var btn = $('form#checkOutForm button[type="submit"]');
-            // alert('Form is valid! Proceeding with submission.');
-            // window.location.href = 'orderProcess.php';
-            btn.find('.spinner-border').remove(); 
-            btn.attr('disabled', false); // Disable button
-          }
-      }
-  };
-
-  var rzp = new Razorpay(options);
-  rzp.open();
-}
-
-    
-
-});
+//   // Open the first collapse section on document load
+//   document.addEventListener("DOMContentLoaded", () => {
+//     const firstCollapseHeader = document.querySelector(".collapse-header");
+//     const firstCollapseContent =
+//       document.querySelector(".collapse-content");
+//     if (firstCollapseHeader && firstCollapseContent) {
+//       firstCollapseHeader.setAttribute("aria-expanded", "true");
+//       firstCollapseContent.classList.add("show");
+//       firstCollapseHeader.querySelector("span:last-child").textContent =
+//         "-";
+//     }
+//   });

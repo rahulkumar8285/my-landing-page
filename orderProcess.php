@@ -19,8 +19,26 @@ $itemqty = $_POST['itemqty'] ?? 1;
 // Convert item quantity to integer
 $itemqty = (int)$itemqty;
 
+$productPriceList = [
+    'pack of 1' => [
+        'delPrice' => 1045,
+        'sellPrice' => 499,
+    ],
+    'pack of 4' => [
+        'delPrice' => 4180,
+        'sellPrice' => 1999,
+    ],
+    'pack of 16' => [
+        'delPrice' => 16720,
+        'sellPrice' => 6488,
+    ],
+];
+
+$color = strtolower($color);
+$productPrice = $productPriceList[$color]['sellPrice'];
+
 // Product price per unit
-$productPrice = 599;
+// $productPrice = 599;
 
 // Calculate subtotal
 $subTotal = $productPrice * $itemqty;

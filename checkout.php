@@ -71,14 +71,15 @@
             <div class="order-summary">
                 <h5>Order Summary</h5>
                 <div class="d-flex align-items-center justify-content-between">
-                    <div class="itemImage">
+                    <div class="itemImage p-2">
                         <div class="itmCount" id="finaCoun" ></div>
-                        <img src="" id="checkout-img" alt="" height="100" >
+                        <img src="assets/images/product-image/pink/skinpop-Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen-main.jpg" 
+                         alt="" height="100"  >
                     </div>
                     <span>
-                        Multi-color Water Proof Foldable Travel Duffel Bag With Pocket (Free Shipping)
+                        Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen
                         <div class="">
-                          Estimated delivery by <b class="deliverDate">22 March 2025</b>
+                          Estimated delivery by <b class="deliverDate"></b>
                         </div>
                     </span>
                     

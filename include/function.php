@@ -66,12 +66,30 @@ function createOrder($postData) {
     global $conn;    
 
     try {
+
+        $productPriceList = [
+            'pack of 1' => [
+                'delPrice' => 1045,
+                'sellPrice' => 499,
+            ],
+            'pack of 4' => [
+                'delPrice' => 4180,
+                'sellPrice' => 1999,
+            ],
+            'pack of 16' => [
+                'delPrice' => 16720,
+                'sellPrice' => 6488,
+            ],
+        ];
+
         // Get last order ID and generate a new one
         $lastOrderId = getLastOrderId($conn);
-
         // Calculate Order Total
         $quantity = (int) $postData['itemqty'];
-        $productPrice = 599; // Fixed product price
+        // $productPrice = 599; // Fixed product price
+        $color = strtolower($postData['color']);
+        $productPrice = $productPriceList[$color]['sellPrice'];
+
         $subTotal = $productPrice * $quantity;
         $discount = ($postData['paymentMethod'] === 'Online Pay') ? round($subTotal * 0.05) : 0;
         $total = $subTotal - $discount;

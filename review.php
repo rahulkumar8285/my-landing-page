@@ -30,6 +30,15 @@ if(isset($product) && !empty($product)){
     <p class="review-text">
         <?= $row['product_details'] ?>
     </p>
+
+         
+    <?php  if(!empty($row['productImage'])) { ?>
+                    <div class="reviewer-image">
+                        <img src="assets/images/product-review/<?= $row['productImage'] ?>.jpg" height="80" width="auto"  
+                        alt="Reviewer Image" class="reviewer-img" >
+                    </div>
+                  <?php } ?>
+                  
     <div class="reviewer-info">
         <strong><?= $row['full_name'] ?></strong><br>
         <?= date( 'd-m-Y', strtotime($row['created_at'])); ?>

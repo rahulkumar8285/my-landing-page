@@ -5,69 +5,124 @@
     <div class="container py-4">
       <div class="row">
         <div class="col-lg-6">
-          <div class="product">
-            <div class="product__images">
-              <img
-                src="./assets/images/product-image/pink/NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image.jpg"
-                alt="google pixel 6"
-                class="product__main-image img-fluid"
-                id="main-image"
-              />
+          <!-- Product Image -->
 
-              <div class="product__slider-wrap">
-                <div class="product__slider">
+          <div class="productImagesBox">
+            
+          <div class="uperArrow">
+            <img src="assets/images/icon/up-arrow-svgrepo-com.svg" class="img-fluid" alt="arrow-up" height="25" width="25" />
+          </div>
 
-                    <img
-                        src="./assets/images/product-image/pink/NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-main-image.jpg"
-                        alt="google pixel 6"
-                        class="product__image product__image--active">
+             <div class="productList">
 
-                  <img
-                    src="./assets/images/product-image/pink/NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-side-1.jpg"
-                    alt="google pixel 6"
-                    class="product__image "
+
+
+
+                <img src="assets/images/product-image/pink/skinpop-Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen-main.jpg"
+                    class="img-fluid"
+                    alt="p-Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen-main"
                   />
-                  <img
-                    src="./assets/images/product-image/pink/NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-side-2.jpg"
-                    alt="google pixel 6"
-                    class="product__image"
+
+                  <img src="assets/images/product-image/pink/skinpop-Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen-benfit.jpg"
+                    class="img-fluid"
+                    alt="skinpop-Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen-benfit"
                   />
-                  <img
-                    src="./assets/images/product-image/pink/NoirÉlan Multi-color Water Proof Foldable Travel Duffel Bag With Pocket-side-3.jpg"
-                    alt="google pixel 6"
-                    class="product__image"
+
+
+                  <img src="assets/images/product-image/pink/skinpop-Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen-effect.jpg"
+                    class="img-fluid"
+                    alt="skinpop-Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen-effect"
                   />
-                
-                </div>
-              </div>
+
+
+                  <img src="assets/images/product-image/pink/skinpop-Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen-best-selling.jpg"
+                    class="img-fluid"
+                    alt="skinpop-Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen-best-selling"
+                  />
+
+
+                  <img src="assets/images/product-image/pink/skinpop-Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen-routen.jpg"
+                    class="img-fluid"
+                    alt="Overnigskinpop-Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen-routen"
+                  />
+
+
+                  
+                  <img src="assets/images/product-image/pink/skinpop-Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen-compare.jpg"
+                    class="img-fluid"
+                    alt="skinpop-Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen-compare"
+                  />
+
+
+                  <img src="assets/images/product-image/pink/skinpop-Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen-use-steps.jpg"
+                    class="img-fluid"
+                    alt="skinpop-Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen-use-steps"
+                  />
+
+
+                  <img src="assets/images/product-image/pink/skinpop-Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen-ingredients.jpg"
+                    class="img-fluid"
+                    alt="skinpop-Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen-ingredients"
+                  />
+
+
+                  <img src="assets/images/product-image/pink/skinpop-Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen-timeline.jpg"
+                    class="img-fluid"
+                    alt="skinpop-Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen-timeline"
+                  />
+
+
+                  <img src="assets/images/product-image/pink/skinpop-Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen-advantage.jpg"
+                    class="img-fluid"
+                    alt="skinpop-Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen-advantage"
+                  />
+
+
+                  <img src="assets/images/product-image/pink/skinpop-Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen-breff.jpg"
+                    class="img-fluid"
+                    alt="skskinpop-Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen-breff"
+                  />
+
+
+                  <img src="assets/images/product-image/pink/skinpop-Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen-relax.jpg"
+                    class="img-fluid"
+                    alt="skinpop-Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen-relax"
+                  />
+
+
+
+
+
+
 
             </div>
+
+          <div class="downArrow">
+            <img src="assets/images/icon/down-arrow-svgrepo-com.svg" class="img-fluid" alt="arrow-up" height="25" width="25" />
           </div>
+
+            <div class="mainImage">
+              <img src="assets/images/product-image/pink/skinpop-Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen-main.jpg"
+                class="img-fluid"  id="main-image"
+                alt="Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen"
+              />
+            </div>
+
+          </div>
+           
+         
         </div>
 
         <div class="col-lg-6">
           <!-- Product Title -->
-          <h2 class="h4 mb-3">
-            Multi-Color Water Proof Foldable Travel Duffel Bag With Pocket (Free
-            Shipping)
+          <h2 class="h2 mb-3">
+          Overnight Korean Glass Skin Face Mask With Real Deep Bio-Collagen
           </h2>
 
-          <!-- Pricing Section -->
-          <div class="mb-3">
-            <span class="h5 fw-bold">₹599</span>
-            <del class="text-muted ms-2">₹999</del>
-            <span class="badge bg-danger ms-2">40% OFF</span>
-            <p class="text-muted mt-1">Inclusive of all taxes</p>
-            <p>
-                Stay stylish and adventure-ready with our durable, water-resistant travel bag—designed for all-weather protection, smart dry-wet separation, and ultimate portability.
-            </p>
-          </div>
-
-          <!-- Save Section -->
           <div class="row mb-3 border-bottom pb-3">
             <div class="col-6">
               <div class="ratingWrap">
-                <div class="ratingCount"><b>4.8 &nbsp</b></div>
+                <div class="ratingCount h4"><b>4.8 &nbsp</b></div>
 
                 <div class="starBox">
                   <svg
@@ -76,7 +131,7 @@
                     height="1em"
                     fill="none"
                     viewBox="0 0 12 12"
-                    style="height: 16px; width: 16px"
+                    style="height: 25px; width: 25px"
                   >
                     <path
                       fill="#FFD232"
@@ -89,7 +144,7 @@
                     height="1em"
                     fill="none"
                     viewBox="0 0 12 12"
-                    style="height: 16px; width: 16px"
+                    style="height: 25px; width: 25px"
                   >
                     <path
                       fill="#FFD232"
@@ -102,7 +157,7 @@
                     height="1em"
                     fill="none"
                     viewBox="0 0 12 12"
-                    style="height: 16px; width: 16px"
+                    style="height: 25px; width: 25px"
                   >
                     <path
                       fill="#FFD232"
@@ -115,7 +170,7 @@
                     height="1em"
                     fill="none"
                     viewBox="0 0 12 12"
-                    style="height: 16px; width: 16px"
+                    style="height: 25px; width: 25px"
                   >
                     <path
                       fill="#FFD232"
@@ -129,7 +184,7 @@
                     height="1em"
                     fill="none"
                     viewBox="0 0 12 12"
-                    style="height: 16px; width: 16px"
+                    style="height: 25px; width: 25px"
                   >
                     <defs>
                       <linearGradient id="grad">
@@ -146,50 +201,70 @@
               </div>
             </div>
             <div class="col-6 text-end">
-              <span class="small fw-bold"><a href="#reviews-section">125 reviews</a></span>
+              <span class="small fw-bold h5"><a href="#reviews-section">125 reviews</a></span>
             </div>
           </div>
+
+          <!-- Pricing Section -->
+          <div class="mb-3">
+           
+            <p class="text-size-more">
+                Achieve Korean Glass Skin with our Overnight Bio Collagen Face Mask! Powered by a viral Korean technology that has captivated 100K+ users in Korea in just one year, this mask is now here to steal your skin's love!
+            </p>
+
+            <div class="price-box d-flex align-items-center">
+              <del class="h3 text-muted ms-2 delValue">₹1,045</del>
+              <span class="h3 fw-bold sellValue"> ₹499</span>
+              <span class="mergenLess badge bg-dark ms-3">Save ₹ 446.00 (43%)</span>
+            </div>
+
+            <p class="text-muted mt-1">(Inclusive of all taxes)</p>
+          </div>
+
+          <!-- Save Section -->
+          
 
           <!-- Color Selection -->
           <div class="mb-4">
-            <p class="fw-bold mb-2">Colour Options: <span id="colorName"></span></p>
+            <p class="fw-bold mb-2">Select Variants and Combos : <span id="colorName"></span></p>
             <div class="d-flex gap-2">
                 <div class="color-preview">
-                    <div class="color-option" data-color="pink" style="background-color:#e2b1ad;" ></div>
+                    <div class="color-option" data-color="PACK OF 1">
+                      PACK OF 1
+                    </div>
                 </div>
                 
-              <div class="color-preview">
-                 <div class="color-option"  data-color="purple" style="background-color:#3a1022;" ></div>
-              </div>
-             
-              <div class="color-preview">
-                <div class="color-option" data-color="blue" style="background-color: #99a5bc;" ></div>
-              </div>
-
-              <div class="color-preview">
-                <div class="color-option" data-color="black"  style="background-color: #2e3034;" ></div>
-              </div>
-
-              <div class="color-preview">
-                <div class="color-option" data-color="grey"  style="background-color: #8c8d97;" ></div>
-              </div>
-
-              <div class="color-preview">
-                <div class="color-option" data-color="green" style="background-color: #a1b49f;" ></div>
-              </div>
+                <div class="color-preview">
+                  <div class="color-option"  data-color="PACK OF 4">
+                    PACK OF 4
+                  </div>
+                </div>
+              
+                <div class="color-preview">
+                  <div class="color-option" data-color="PACK OF 16">
+                    PACK OF 16
+                  </div>
+                </div>
 
             </div>
           </div>
 
+          <div class="mb-4" style="font-size: 14px; color: #000000;">
+            For: ✔ Deep Hydrate, ✔ Anti Ageing, ✔ Skin Repair, ✔ Skin Brightening, ✔ Skin Glow, ✔ Skin Firming, ✔ Anti Wrinkle, ✔ Anti Acne, ✔ Anti Pigmentation, ✔ Anti Dark Spots, ✔ Anti Tan, ✔ Anti Puffiness
+          </div>
+
+
+
+
           <!-- Size Selection -->
-          <div class="mb-4">
+          <!-- <div class="mb-4">
             <p class="fw-bold mb-3">Select Size</p>
             <div class="d-flex gap-2">
               <button class="btn btn-outline-dark size-btn active">
                 45 Litre
               </button>
             </div>
-          </div>
+          </div> -->
 
           <!-- Quantity Selection -->
           <div class="mb-4">
@@ -217,7 +292,7 @@
           <!-- Delivery Check -->
 
           <!-- Product Details -->
-          <div class="mb-4">
+          <div class="mb-4 ">
             <div
               class="collapse-header"
               data-toggle="collapse"
@@ -227,10 +302,10 @@
             >
               <span
                 ><img
-                  src="assets/images/icon/ic-prod-desc.svg"
-                  class="img-fluid"
+                  src="assets/images/icon/benefits-welfare-expenses-svgrepo-com.svg"
+                  class="img-fluid" height="20px" width="20px"
                 />
-                Product Description</span
+                Benefits</span
               >
               <span>+</span>
             </div>
@@ -238,36 +313,20 @@
 
               <p>
 
-              <b>Durable and Water-Resistant Design:</b> This travel bag features a
-              water-resistant nylon material that ensures your belongings remain
-              dry in wet conditions, making it perfect for outdoor enthusiasts
-              and travelers.
-
+              <b>3 Layer Deep Skin Hydration:</b> The mask's unique 3-layer technology penetrates deep into the skin, providing intense hydration and nourishment, making it ideal for users with dry or dehydrated skin.
               </p>
               <p>
-                <b>Multi-Color Options:</b> Available in a range of colors, this
-                bag allows users to choose a style that suits their personal
-                preference, from classic to vibrant.
+                <b>Reduces pores for smoother skin:</b> The mask's collagen-rich formula helps to minimize the appearance of pores, resulting in a smoother and more refined skin texture, as requested by users looking for a flawless complexion.
               </p>
 
               <p>
-                <b>Dry and Wet Separation:</b> The bag's innovative design
-                separates dry and wet items, keeping your clothes and gear
-                organized and dry, as requested by frequent travelers who often
-                encounter rainy conditions.
+                <b>Revitalizes dull skin:</b> The mask's brightening properties help to revitalize dull and tired skin, giving it a radiant and youthful glow, perfect for users seeking a revitalizing skincare solution.
               </p>
 
               <p>
-                <b>Foldable and Space-Saving:</b> The bag can be folded, making
-                it easy to store in small spaces, ideal for users who prioritize
-                convenience and portability.
+                <b>Tightens and improves skin elasticity:</b> The mask's collagen content helps to tighten and firm the skin, improving its elasticity and reducing the appearance of fine lines and wrinkles, making it suitable for users concerned about aging skin.
               </p>
 
-              <p>
-                <b>Unisex and Fashionable:</b> Designed for both men and women,
-                this stylish bag combines functionality with fashion, perfect
-                for users looking for a versatile and chic travel accessory.
-              </p>
             </div>
           </div>
 
@@ -282,17 +341,104 @@
             >
               <span
                 ><img
-                  src="assets/images/icon/ic-return.svg"
-                  class="img-fluid"
+                  src="assets/images/icon/ingredients-svgrepo-com.svg"
+                  class="img-fluid" height="20px" width="20px"
                 />
-                15 Days Returns & Exchange</span
+                Ingredients</span
               >
               <span>+</span>
             </div>
             <div class="collapse collapse-content" id="returnPolicy">
-              <p>Easy returns upto 15 days of delivery.</p>
+                <p>
+                  <b>Collagen:</b>Stimulates cell regeneration, reduces wrinkles and dryness for a youthful skin.
+                </p>
+
+                <p>
+                  <b>Niacinamide:</b>Reduces inflammation, minimizes pores, brightens skin tone.
+                </p>
+
+                <p>
+                  <b>Oligo Hyaluronic acid:</b>Deeply hydrates skin, improves elasticity, and reduces fine lines.
+                </p>
+
             </div>
           </div>
+
+          <!-- Secure Payments Section -->
+
+          <div class="mb-3">
+            <div
+              class="collapse-header"
+              data-toggle="collapse"
+              data-target="#howToUse"            
+              aria-expanded="false"
+              aria-controls="howToUse"
+            >
+              <span
+                ><img
+                  src="assets/images/icon/clipboard-list-alt-svgrepo-com.svg"
+                  class="img-fluid" height="20px" width="20px"
+                />
+                How To Use</span
+              >
+              <span>+</span>
+            </div>
+            <div class="collapse collapse-content" id="howToUse">
+                <p>
+                  <ol>
+                    <li>Clear the skin before applying the mask</li>
+                    <li>Peel off the film from the bottom mask, align it with your mouth</li>
+                    <li>Peel off the film from the top mask & align it with your eyes</li>
+                    <li>Leave the mask on for 3-4 hours until it's transparent</li>
+                  </ol>
+                </p>
+            </div>
+          </div>
+
+
+          <div class="mb-3">
+            <div
+              class="collapse-header"
+              data-toggle="collapse"
+              data-target="#faq"            
+              aria-expanded="false"
+              aria-controls="faq"
+            >
+              <span
+                ><img
+                  src="assets/images/icon/faq-svgrepo-com.svg"
+                  class="img-fluid" height="20px" width="20px"
+                />
+                FAQs</span
+              >
+              <span>+</span>
+            </div>
+            <div class="collapse collapse-content" id="faq">
+                <p>
+                  <b>Q1: Does it really work overnight??</b><br>
+                    Yes! The advanced Korean bio-collagen technology is designed to penetrate 3 layers deep while you sleep, helping you wake up with plump, glowing skin.
+                </p>
+
+                <p>
+                  <b>Q2: How often should I use the mask for best results?</b><br>
+                  For best results, use the mask 2–3 times a week at night. Let the powerful ingredients work overnight for maximum hydration and skin renewal.
+                </p>
+
+
+                <p>
+                  <b>Q3: Can I use this mask on sensitive skin?</b><br>
+                  Yes, the mask is formulated with ultra-low molecular collagen and hyaluronic acid, making it gentle and effective for all skin types, including sensitive skin.
+                </p>
+
+                <p>
+                  <b>Q4: What is the Overnight Korean Glass Skin Face Mask used for?</b><br>
+                  This mask is designed to deeply hydrate, reduce signs of aging, and boost glow while you sleep — delivering the coveted Korean glass skin effect.
+                </p>
+
+
+            </div>
+          </div>
+
 
           <hr />
 
@@ -571,6 +717,14 @@
                   <p class="review-text">
                       <?= $row['product_details'] ?>
                   </p>
+                      
+                  <?php  if(!empty($row['productImage'])) { ?>
+                    <div class="reviewer-image">
+                        <img src="assets/images/product-review/<?= $row['productImage'] ?>.jpg" height="80" width="auto"  
+                        alt="Reviewer Image" class="reviewer-img" >
+                    </div>
+                  <?php } ?>
+
                   <div class="reviewer-info">
                       <strong><?= $row['full_name'] ?></strong><br>
                       <?= date( 'd-m-Y', strtotime($row['created_at'])); ?>
