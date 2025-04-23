@@ -20,14 +20,6 @@ $razorpay_config = array(
 );
 
 
-
-
-$razorpay_config = array(
-    'api_key' => 'rzp_live_wEoP58ZS6GW7Op',
-    'api_secret' => '7OTdm1YbFzItQLIOczW3JBoD',
-);
-
-
 // Create connection
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

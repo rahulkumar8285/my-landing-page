@@ -131,7 +131,7 @@
                     height="1em"
                     fill="none"
                     viewBox="0 0 12 12"
-                    style="height: 25px; width: 25px"
+                    style="height: 18px; width: 18px"
                   >
                     <path
                       fill="#FFD232"
@@ -144,7 +144,7 @@
                     height="1em"
                     fill="none"
                     viewBox="0 0 12 12"
-                    style="height: 25px; width: 25px"
+                    style="height: 18px; width: 18px"
                   >
                     <path
                       fill="#FFD232"
@@ -157,7 +157,7 @@
                     height="1em"
                     fill="none"
                     viewBox="0 0 12 12"
-                    style="height: 25px; width: 25px"
+                    style="height: 18px; width: 18px"
                   >
                     <path
                       fill="#FFD232"
@@ -170,7 +170,7 @@
                     height="1em"
                     fill="none"
                     viewBox="0 0 12 12"
-                    style="height: 25px; width: 25px"
+                    style="height: 18px; width: 18px"
                   >
                     <path
                       fill="#FFD232"
@@ -184,7 +184,7 @@
                     height="1em"
                     fill="none"
                     viewBox="0 0 12 12"
-                    style="height: 25px; width: 25px"
+                    style="height: 18px; width: 18px"
                   >
                     <defs>
                       <linearGradient id="grad">
