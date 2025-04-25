@@ -24,7 +24,7 @@
     <meta property="og:title" content="SkinPop – Affordable Skincare for Every Glow">
     <meta property="og:description" content="Shop affordable skincare made for Indian skin. Trusted by 100K+ customers. Glow starts here.">
     <meta property="og:image" content="https://yourdomain.com/og-image.jpg"> <!-- Replace with actual image URL -->
-    <meta property="og:url" content="https://www.skinpop.in"> <!-- Replace with your real URL -->
+    <meta property="og:url" content="https://www.skinpop. "> <!-- Replace with your real URL -->
     <meta property="og:type" content="website">
 
     <!-- Twitter -->
@@ -76,7 +76,7 @@
   <body>
     <!-- header -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
+      <div class="container d-flex justify-content-center align-items-center">
         <a class="navbar-brand" href="/">
             <img src="./assets/images/logo/logo.PNG" alt="NoirÉlan" class="img-fluid" style="height:65px;"/>
         </a>
