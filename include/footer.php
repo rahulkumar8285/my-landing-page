@@ -27,7 +27,7 @@
                     <h6 class="section-title">Connect With Us</h6>
                     <ul class="footer-list">
                         <li><a href="tel:+919311734258">Call: +91 9311734258</a></li>
-                        <li><a href="mailto:support@noirelan.com">support@noirelan.com</a></li>
+                        <li><a href="mailto:care@skinpop.in">care@skinpop.in</a></li>
                     </ul>
                 </div>
 

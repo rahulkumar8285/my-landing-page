@@ -109,9 +109,9 @@ We reserve the right, at our sole discretion, to update, change or replace any p
 
 <h5>SECTION 20 - CONTACT INFORMATION</h5>
 
-Trade name : NoirÉlan<br>
+Trade name : SkinPop<br>
 Phone number : +91 9311734258<br>
-Email : support@noirélan.com<br>
+Email : care@skinpop.in<br>
 Physical Address : A/32 Street Number 6 Deepak Vihar Uttam Nagar, New Delhi 110059        
 
 </div>

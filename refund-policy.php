@@ -7,7 +7,7 @@
 <div class="container py-5">
     <div class="card">
         <div class="card-body">
-            <h2 class=" text-dark fw-bold">NoirÉlan Return & Refund Policy</h2>
+            <h2 class=" text-dark fw-bold">SkinPop Return & Refund Policy</h2>
             <p class="mt-3">We have a <strong>15-day return policy</strong>, which means you have <strong>15 days</strong> after receiving your item to request a return.</p>
             <p>Once your refund request is approved, we will credit the amount to your bank account within <strong>5 working days</strong>.</p>
 
@@ -21,15 +21,15 @@
             <p>If your return is accepted, we will provide you with a <strong>return shipping label</strong> and instructions on how to send your package.</p>
             <p class="text-danger"><strong>Returns sent without prior approval will not be accepted.</strong></p>
             
-            <p>To initiate a return, contact us at: <a href="mailto:support@noirelan.com" class="text-decoration-none text-primary fw-bold">support@noirelan.com</a>.</p>
+            <p>To initiate a return, contact us at: <a href="mailto:care@skinpop.in" class="text-decoration-none text-primary fw-bold">care@skinpop.in</a></p>
 
             <h4 class="text-dark mt-4">Return Address:</h4>
             <div class="alert alert-secondary">
-                📍 <strong>NoirÉlan Returns</strong> <br>
-                A/23 Street No 6 Deepak Vihar Uttam Nagar, New Delhi - 110059
+                📍 <strong>SkinPop Returns</strong> <br>
+                    A/23 Street No 6 Deepak Vihar Uttam Nagar, New Delhi - 110059
             </div>
 
-            <p>For any return-related queries, reach out to us at: <a href="mailto:support@noirelan.com" class="text-decoration-none text-primary fw-bold">support@noirelan.com</a>.</p>
+            <p>For any return-related queries, reach out to us at: <a href="mailto:care@skinpop.in" class="text-decoration-none text-primary fw-bold">care@skinpop.in</a></p>
         </div>
     </div>
 </div>

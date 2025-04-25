@@ -57,7 +57,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
         <a class="navbar-brand" href="/">
-            <img src="./assets/images/logo/logo.PNG" alt="NoirÉlan" class="img-fluid" style="height: 50px;"/>
+            <img src="./assets/images/logo/logo.PNG" alt="NoirÉlan" class="img-fluid" style="height:65px;"/>
         </a>
         <!-- <button
           class="navbar-toggler"

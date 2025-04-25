@@ -11,7 +11,7 @@
                 <p>If you have any questions, feel free to contact us.</p>
                 <ul class="list-unstyled">
                     <li><strong>Phone:</strong> +91 9311734258</li>
-                    <li><strong>Email:</strong> support@noirélan.com</li>
+                    <li><strong>Email:</strong> <a href="mail:care@skinpop.in">care@skinpop.in</a></li>
                     <li><strong>Address:</strong> A/32 Street Number 6 Deepak Vihar Uttam Nagar, New Delhi 110059</li>
                 </ul>
             </div>
