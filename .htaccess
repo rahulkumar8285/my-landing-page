@@ -1,0 +1,5 @@
+RewriteEngine On
+
+# Force www
+RewriteCond %{HTTP_HOST} ^skinpop\.com [NC]
+RewriteRule ^(.*)$ https://www.skinpop.com/$1 [L,R=301]

@@ -24,14 +24,14 @@
     <meta property="og:title" content="SkinPop – Affordable Skincare for Every Glow">
     <meta property="og:description" content="Shop affordable skincare made for Indian skin. Trusted by 100K+ customers. Glow starts here.">
     <meta property="og:image" content="https://yourdomain.com/og-image.jpg"> <!-- Replace with actual image URL -->
-    <meta property="og:url" content="https://www.skinpop. "> <!-- Replace with your real URL -->
+    <meta property="og:url" content="https://www.skinpop.in/assets/images/product-image/pink/skinpop-Overnight%20Korean%20Glass%20Skin%20Face%20Mask%20With%20Real%20Deep%20Bio-Collagen-effect.jpg"> <!-- Replace with your real URL -->
     <meta property="og:type" content="website">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="SkinPop – Affordable Skincare for Every Glow">
     <meta name="twitter:description" content="Trendy, effective skincare made for Indian skin. Pop your glow, own your glow.">
-    <meta name="twitter:image" content="https://yourdomain.com/twitter-image.jpg">
+    <meta name="twitter:image" content="https://www.skinpop.in/assets/images/product-image/pink/skinpop-Overnight%20Korean%20Glass%20Skin%20Face%20Mask%20With%20Real%20Deep%20Bio-Collagen-effect.jpg">
 
     <link rel="apple-touch-icon" sizes="57x57" href="./assets/images/icon/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="./assets/images/icon/favicon/apple-icon-60x60.png">
