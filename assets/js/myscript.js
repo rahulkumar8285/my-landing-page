@@ -16,16 +16,16 @@ $(document).ready(function () {
     // price list for different packs
     const priceList = {
         'pack of 1': {
-          delPrice: 499,
-          sellPrice: 249,
+          delPrice: 1045,
+          sellPrice: 499,
         },
         'pack of 4': {
-          delPrice: 1999,
-          sellPrice: 699,
+          delPrice: 4180,
+          sellPrice: 1999,
         },
         'pack of 16': {
-          delPrice: 6999,
-          sellPrice: 3999,
+          delPrice: 16720,
+          sellPrice: 6488,
         },
       };
 
