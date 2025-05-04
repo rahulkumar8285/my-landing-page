@@ -69,18 +69,19 @@ function createOrder($postData) {
 
         $productPriceList = [
             'pack of 1' => [
-                'delPrice' => 1045,
-                'sellPrice' => 499,
+                'delPrice' => 399,
+                'sellPrice' => 249,
             ],
             'pack of 4' => [
-                'delPrice' => 4180,
-                'sellPrice' => 1999,
+                'delPrice' => 1599,
+                'sellPrice' => 899,
             ],
             'pack of 16' => [
-                'delPrice' => 16720,
-                'sellPrice' => 6488,
+                'delPrice' => 5999,
+                'sellPrice' => 3499,
             ],
         ];
+
 
         // Get last order ID and generate a new one
         $lastOrderId = getLastOrderId($conn);

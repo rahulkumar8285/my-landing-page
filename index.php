@@ -213,9 +213,9 @@
             </p>
 
             <div class="price-box d-flex align-items-center">
-              <del class="h3 text-muted ms-2 delValue">₹1,045</del>
-              <span class="h3 fw-bold sellValue"> ₹499</span>
-              <span class="mergenLess badge bg-dark ms-3">Save ₹ 446.00 (43%)</span>
+              <del class="h3 text-muted ms-2 delValue">₹399</del>
+              <span class="h3 fw-bold sellValue"> ₹249</span>
+              <span class="mergenLess badge bg-dark ms-3">Save ₹ 150.00 (38%)</span>
             </div>
 
             <p class="text-muted mt-1">(Inclusive of all taxes)</p>

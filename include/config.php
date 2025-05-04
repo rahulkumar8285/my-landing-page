@@ -1,16 +1,16 @@
 
 <?php
 // Database configuration
-// $servername = "localhost";
-// $username = "root";
-// $password = "";
-// $dbname = "mystore";
-
-
 $servername = "localhost";
-$username = "u961445218_mystore";
-$password = "y5DaI]&N";
-$dbname = "u961445218_mystore";
+$username = "root";
+$password = "";
+$dbname = "mystore";
+
+
+// $servername = "localhost";
+// $username = "u961445218_mystore";
+// $password = "y5DaI]&N";
+// $dbname = "u961445218_mystore";
 
 
 

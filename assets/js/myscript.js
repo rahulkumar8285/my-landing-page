@@ -16,16 +16,16 @@ $(document).ready(function () {
     // price list for different packs
     const priceList = {
         'pack of 1': {
-          delPrice: 1045,
-          sellPrice: 499,
+          delPrice: 399,
+          sellPrice: 249,
         },
         'pack of 4': {
-          delPrice: 4180,
-          sellPrice: 1999,
+          delPrice: 1599,
+          sellPrice: 899,
         },
         'pack of 16': {
-          delPrice: 16720,
-          sellPrice: 6488,
+          delPrice: 5999,
+          sellPrice: 3499,
         },
       };
 
@@ -335,9 +335,9 @@ $(document).ready(function () {
         key: "rzp_live_wEoP58ZS6GW7Op", // Replace with your Razorpay API Key
         amount: 0, // Amount will be dynamically set in backend
         currency: "INR",
-        name: "NoirÉlan",
+        name: "SkinPop",
         description: "Payment for your order",
-        image: "https://xn--noirlan-eya.com/assets/images/logo/logo.PNG",
+        image: "https://skinpop.in/assets/images/logo/skin-pop-black.PNG",
         order_id: order_id, // Order ID from backend
         prefill: {
             contact: mobileNumber
